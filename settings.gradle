@@ -1,1 +1,1 @@
-include ':keystore'
+include ':keystore', ':keystoresample'
