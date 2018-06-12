@@ -263,14 +263,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
       var encryptedEmail = factory.encrypt(EMAIL, mEmail)
       var encryptedPassword = factory.encrypt(PASSWORD, mPassword)
 
-      return arrayOf("$mEmail:$mPassword")
-          .map { it.split(":") }
-          .firstOrNull { it[0] == factory.decrypt(EMAIL, encryptedEmail) }
-          ?.let {
-            // Account exists, return true if the password matches.
-            it[1] == factory.decrypt(PASSWORD, encryptedPassword)
-          }
-          ?: true
+      return factory.decrypt(EMAIL, encryptedEmail).equals(mEmail)&& factory.decrypt(PASSWORD, encryptedPassword).equals(mPassword)
     }
 
     override fun onPostExecute(success: Boolean?) {
