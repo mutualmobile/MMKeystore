@@ -271,7 +271,8 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
       showProgress(false)
 
       if (success!!) {
-        finish()
+        email.setText("")
+        password.setText("")
       } else {
         password.error = getString(R.string.error_incorrect_password)
         password.requestFocus()

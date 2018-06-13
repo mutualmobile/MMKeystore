@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "256937694164",
+    "firebase_url": "https://accukeystore.firebaseio.com",
+    "project_id": "accukeystore",
+    "storage_bucket": "accukeystore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256937694164:android:33d831dc0981a21e",
+        "android_client_info": {
+          "package_name": "com.mutualmobile.keystoresample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256937694164-2u4tsklqtidf9e2jipt6t0c2rtjeehpv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mutualmobile.keystoresample",
+            "certificate_hash": "2303fa57308df3b29ddcf0dc0074ebd2b5fb5879"
+          }
+        },
+        {
+          "client_id": "256937694164-joreqdju9cqnii3a2mao3nrq5eiv236p.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "256937694164-joreqdju9cqnii3a2mao3nrq5eiv236p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCshMJPYXWdMzzXGhc1qIEtn7bPr9rmBfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256937694164-joreqdju9cqnii3a2mao3nrq5eiv236p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
