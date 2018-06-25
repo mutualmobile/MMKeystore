@@ -23,7 +23,7 @@ import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.net.LocalSocket
 import android.net.LocalSocketAddress
 import com.accukeystore.internal.android.crypto.CipherFactory
-import com.accukeystore.internal.android.crypto.SyncCrypto
+import com.accukeystore.internal.android.crypto.KeystoreCrypto
 import com.accukeystore.internal.android.crypto.misc.Base64
 import com.accukeystore.internal.android.crypto.misc.PRNGFixes
 import java.io.IOException
@@ -39,10 +39,11 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
 /**
- * Implements [SyncCrypto] methods for API 9 to 18 (pre Android KeyStore public API).
+ * Implements [KeystoreCrypto] methods for API 9 to 18 (pre Android KeyStore public API).
  */
-class SyncCryptoLegacy @Throws(KeyStoreException::class)
-constructor(private val context: Context) : SyncCrypto {
+class KeystoreCryptoLegacy @Throws(KeyStoreException::class)
+constructor(private val context: Context) :
+    KeystoreCrypto {
   private var mError = NO_ERROR
   private val random = SecureRandom()
 

@@ -18,27 +18,25 @@ package com.accukeystore.internal.android.crypto
 
 import android.content.Context
 import android.os.Build
-import com.accukeystore.internal.android.crypto.api18.SyncCryptoApi18Impl
-import com.accukeystore.internal.android.crypto.api23.SyncCryptoApi23Impl
-import com.accukeystore.internal.android.crypto.apilegacy.SyncCryptoLegacy
+import com.accukeystore.internal.android.crypto.api18.KeystoreCryptoApi18Impl
+import com.accukeystore.internal.android.crypto.api23.KeystoreCryptoApi23Impl
+import com.accukeystore.internal.android.crypto.apilegacy.KeystoreCryptoLegacy
 import java.security.KeyStoreException
 
-/**
- */
-object SyncCryptoFactory {
+object KeystoreCryptoFactory {
 
   private val IS_API_23 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
   private val IS_API_18 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2
   private val IS_API_LEGACY = Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD
 
   @Throws(KeyStoreException::class)
-  fun get(context: Context): SyncCrypto {
+  fun get(context: Context): KeystoreCrypto {
     return if (IS_API_23) {
-      SyncCryptoApi23Impl(context)
+      KeystoreCryptoApi23Impl(context)
     } else if (IS_API_18) {
-      SyncCryptoApi18Impl(context)
+      KeystoreCryptoApi18Impl(context)
     } else if (IS_API_LEGACY) {
-      SyncCryptoLegacy(context)
+      KeystoreCryptoLegacy(context)
     } else {
       throw KeyStoreException("Unknown android version")
     }

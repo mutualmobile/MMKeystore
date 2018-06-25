@@ -24,7 +24,7 @@ import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.os.Build
 import android.security.KeyPairGeneratorSpec
 import com.accukeystore.internal.android.crypto.CipherFactory
-import com.accukeystore.internal.android.crypto.SyncCrypto
+import com.accukeystore.internal.android.crypto.KeystoreCrypto
 import com.accukeystore.internal.android.crypto.misc.Base64
 import com.accukeystore.internal.android.crypto.misc.PRNGFixes
 import java.io.ByteArrayInputStream
@@ -58,10 +58,11 @@ import javax.crypto.spec.SecretKeySpec
 import javax.security.auth.x500.X500Principal
 
 /**
- * Implements [SyncCrypto] methods for API 18 (after the Android KeyStore public API).
+ * Implements [KeystoreCrypto] methods for API 18 (after the Android KeyStore public API).
  */
-open class SyncCryptoApi18Impl @Throws(KeyStoreException::class)
-constructor(protected var context: Context) : SyncCrypto {
+open class KeystoreCryptoApi18Impl @Throws(KeyStoreException::class)
+constructor(protected var context: Context) :
+    KeystoreCrypto {
 
   protected var keyStore: KeyStore
 
