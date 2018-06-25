@@ -23,10 +23,7 @@ dependencies {
 
 See [version.txt](version.txt) for the latest version number.
 
-## Building MMKeystore User Encryption
-
 In case you don't want to use the precompiled version, you can build the library yourself from source.
-
 
 ## How to use
 
