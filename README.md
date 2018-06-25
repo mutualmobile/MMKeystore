@@ -58,6 +58,10 @@ factory.decrypt(EMAIL, encryptedEmail)
 factory.decrypt(PASSWORD, encryptedPassword)
 ```
 
+## Special Thanks
+
+Realm - The popular mobile database that runs directly inside phones, tablets or wearables. This library is cloned from (https://github.com/realm/realm-android-user-store)
+
 ## License
 
 MMKeystore User Encryption is published under the Apache 2.0 license.
