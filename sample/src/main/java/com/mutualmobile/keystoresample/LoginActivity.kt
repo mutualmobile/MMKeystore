@@ -21,8 +21,8 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.mutualmobile.internal.android.crypto.SyncCrypto
-import com.mutualmobile.internal.android.crypto.SyncCryptoFactory
+import com.mutualmobile.internal.android.crypto.KeystoreCrypto
+import com.mutualmobile.internal.android.crypto.KeystoreCryptoFactory
 import kotlinx.android.synthetic.main.activity_login.email
 import kotlinx.android.synthetic.main.activity_login.email_sign_in_button
 import kotlinx.android.synthetic.main.activity_login.login_form
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
    */
   private var mAuthTask: UserLoginTask? = null
 
-  private lateinit var factory: SyncCrypto
+  private lateinit var factory: KeystoreCrypto
 
   private val EMAIL = "EMAIL"
   private val PASSWORD = "PASSWORD"
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_login)
 
-    factory = SyncCryptoFactory.get(this)
+    factory = KeystoreCryptoFactory.get(this)
 
     // Set up the login form.
     populateAutoComplete()
