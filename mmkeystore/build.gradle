@@ -26,8 +26,14 @@ android {
   }
 }
 
+ext {
+  bintrayName = 'mmkeystore'
+  libraryName = 'mmkeystore'
+}
+
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation deps.kotlinsdk
   implementation deps.appcompatv7
 }
+apply from: '../bintray.gradle'
