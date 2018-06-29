@@ -21,8 +21,8 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.accukeystore.internal.android.crypto.SyncCrypto
-import com.accukeystore.internal.android.crypto.SyncCryptoFactory
+import com.mutualmobile.internal.android.crypto.SyncCrypto
+import com.mutualmobile.internal.android.crypto.SyncCryptoFactory
 import kotlinx.android.synthetic.main.activity_login.email
 import kotlinx.android.synthetic.main.activity_login.email_sign_in_button
 import kotlinx.android.synthetic.main.activity_login.login_form
