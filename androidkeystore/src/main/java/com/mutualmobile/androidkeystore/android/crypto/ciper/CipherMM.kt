@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto.misc
+package com.mutualmobile.androidkeystore.android.crypto.ciper
+
+import java.security.NoSuchAlgorithmException
+import java.security.NoSuchProviderException
+import javax.crypto.NoSuchPaddingException
 
 /**
- * Base64 helper methods.
+ * Return a [javax.crypto.Cipher] that works for API  23.
  */
-object Base64 {
-  fun to(bytes: ByteArray): String {
-    return android.util.Base64.encodeToString(bytes, android.util.Base64.NO_WRAP)
+object CipherMM {
+  @Throws(NoSuchPaddingException::class, NoSuchAlgorithmException::class,
+      NoSuchProviderException::class)
+  fun get(): javax.crypto.Cipher {
+    return javax.crypto.Cipher.getInstance("RSA/ECB/PKCS1Padding")
   }
-
-  fun from(base64: String): ByteArray {
-    return android.util.Base64.decode(base64, android.util.Base64.NO_WRAP)
-  }
-
 }

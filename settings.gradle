@@ -1,1 +1,1 @@
-include ':mmkeystore', ':sample'
+include ':androidkeystore', ':sample'

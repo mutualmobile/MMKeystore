@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto.ciper
+package com.mutualmobile.androidkeystore.android.crypto.ciper
 
 import java.security.NoSuchAlgorithmException
 import java.security.NoSuchProviderException

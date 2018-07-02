@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto.apilegacy
+package com.mutualmobile.androidkeystore.android.crypto.apilegacy
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -22,11 +22,11 @@ import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.net.LocalSocket
 import android.net.LocalSocketAddress
-import com.mutualmobile.internal.android.crypto.CipherFactory
-import com.mutualmobile.internal.android.crypto.KeystoreCrypto
-import com.mutualmobile.internal.android.crypto.apilegacy.KeystoreCryptoLegacy.State.UNLOCKED
-import com.mutualmobile.internal.android.crypto.misc.Base64
-import com.mutualmobile.internal.android.crypto.misc.PRNGFixes
+import com.mutualmobile.androidkeystore.android.crypto.CipherFactory
+import com.mutualmobile.androidkeystore.android.crypto.KeystoreCrypto
+import com.mutualmobile.androidkeystore.android.crypto.apilegacy.KeystoreCryptoLegacy.State.UNLOCKED
+import com.mutualmobile.androidkeystore.android.crypto.misc.Base64
+import com.mutualmobile.androidkeystore.android.crypto.misc.PRNGFixes
 import java.io.IOException
 import java.io.UnsupportedEncodingException
 import java.security.GeneralSecurityException

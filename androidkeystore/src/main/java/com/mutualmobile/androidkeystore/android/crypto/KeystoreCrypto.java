@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto;
+package com.mutualmobile.androidkeystore.android.crypto;
 
 import android.app.Activity;
 import java.security.KeyStoreException;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto
+package com.mutualmobile.androidkeystore.android.crypto
 
 import android.content.Context
 import android.os.Build
-import com.mutualmobile.internal.android.crypto.api18.KeystoreCryptoApi18Impl
-import com.mutualmobile.internal.android.crypto.api23.KeystoreCryptoApi23Impl
-import com.mutualmobile.internal.android.crypto.apilegacy.KeystoreCryptoLegacy
+import com.mutualmobile.androidkeystore.android.crypto.api18.KeystoreCryptoApi18Impl
+import com.mutualmobile.androidkeystore.android.crypto.api23.KeystoreCryptoApi23Impl
+import com.mutualmobile.androidkeystore.android.crypto.apilegacy.KeystoreCryptoLegacy
 import java.security.KeyStoreException
 
 object KeystoreCryptoFactory {

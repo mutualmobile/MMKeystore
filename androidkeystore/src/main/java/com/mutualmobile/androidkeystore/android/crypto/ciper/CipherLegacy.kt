@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto.ciper
+package com.mutualmobile.androidkeystore.android.crypto.ciper
 
 import java.security.NoSuchAlgorithmException
 import java.security.NoSuchProviderException
 import javax.crypto.NoSuchPaddingException
 
 /**
- * Return a [javax.crypto.Cipher] that works for API  23.
+ * Return a [javax.crypto.Cipher] that works for the legacy API 9 to 18.
  */
-object CipherMM {
+object CipherLegacy {
   @Throws(NoSuchPaddingException::class, NoSuchAlgorithmException::class,
       NoSuchProviderException::class)
   fun get(): javax.crypto.Cipher {
-    return javax.crypto.Cipher.getInstance("RSA/ECB/PKCS1Padding")
+    return javax.crypto.Cipher.getInstance("AES/CBC/PKCS5Padding")
   }
 }

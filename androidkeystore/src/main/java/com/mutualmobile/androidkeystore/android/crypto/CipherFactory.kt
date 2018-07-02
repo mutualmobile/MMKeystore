@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package com.mutualmobile.internal.android.crypto
+package com.mutualmobile.androidkeystore.android.crypto
 
 import android.os.Build
-import com.mutualmobile.internal.android.crypto.ciper.*
-import com.mutualmobile.internal.android.crypto.ciper.CipherJB
-import com.mutualmobile.internal.android.crypto.ciper.CipherLegacy
-import com.mutualmobile.internal.android.crypto.ciper.CipherMM
+import com.mutualmobile.androidkeystore.android.crypto.ciper.CipherJB
+import com.mutualmobile.androidkeystore.android.crypto.ciper.CipherLegacy
+import com.mutualmobile.androidkeystore.android.crypto.ciper.CipherMM
 import java.security.NoSuchAlgorithmException
 import java.security.NoSuchProviderException
 import javax.crypto.Cipher

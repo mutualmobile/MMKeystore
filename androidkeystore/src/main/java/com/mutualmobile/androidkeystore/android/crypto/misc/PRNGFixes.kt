@@ -1,4 +1,4 @@
-package com.mutualmobile.internal.android.crypto.misc
+package com.mutualmobile.androidkeystore.android.crypto.misc
 
 import android.os.Build
 import android.os.Process

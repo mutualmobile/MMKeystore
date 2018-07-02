@@ -21,8 +21,8 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.mutualmobile.internal.android.crypto.KeystoreCrypto
-import com.mutualmobile.internal.android.crypto.KeystoreCryptoFactory
+import com.mutualmobile.androidkeystore.android.crypto.KeystoreCrypto
+import com.mutualmobile.androidkeystore.android.crypto.KeystoreCryptoFactory
 import com.mutualmobile.keystoresample.R.id.password
 import kotlinx.android.synthetic.main.activity_login.email
 import kotlinx.android.synthetic.main.activity_login.email_sign_in_button

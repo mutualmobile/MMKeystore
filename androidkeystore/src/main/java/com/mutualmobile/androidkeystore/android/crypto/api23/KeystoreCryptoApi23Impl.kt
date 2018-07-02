@@ -1,12 +1,12 @@
-package com.mutualmobile.internal.android.crypto.api23
+package com.mutualmobile.androidkeystore.android.crypto.api23
 
 import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
-import com.mutualmobile.internal.android.crypto.KeystoreCrypto
-import com.mutualmobile.internal.android.crypto.api18.KeystoreCryptoApi18Impl
+import com.mutualmobile.androidkeystore.android.crypto.KeystoreCrypto
+import com.mutualmobile.androidkeystore.android.crypto.api18.KeystoreCryptoApi18Impl
 import java.math.BigInteger
 import java.security.InvalidAlgorithmParameterException
 import java.security.KeyPairGenerator
