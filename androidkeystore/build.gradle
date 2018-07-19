@@ -27,7 +27,7 @@ android {
 }
 
 ext {
-  bintrayName = 'android-keystore'
+  bintrayName = 'mm-keystore'
   libraryName = 'android-keystore'
 }
 
