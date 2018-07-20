@@ -17,7 +17,7 @@ Include the following dependencies in your app's build.gradle :
 
 ```
 dependencies {
-    compile 'com.mutualmobile:mmkeystore:<version>'
+    compile 'com.mutualmobile:androidkeystore:<version>'
 }
 ```
 
