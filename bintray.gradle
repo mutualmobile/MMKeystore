@@ -81,6 +81,8 @@ bintray {
     userOrg = POM_ORG
     vcsUrl = POM_GIT_URL
     licenses = POM_LICENCES
+   //override to be used when you need to upload new code with same version name
+    override = true
     publish = true
     publicDownloadNumbers = true
     version {
