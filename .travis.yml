@@ -17,12 +17,6 @@ before_install:
   - yes | sdkmanager "platforms;android-27"
 script:
     - ./gradlew clean assemble test
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    on:
-      branch: master
 #before_script:
 #  - echo no | android create avd --force -n test -t android-26 --abi armeabi-v7a
 #  - emulator -avd test -no-skin -no-audio -no-window &
