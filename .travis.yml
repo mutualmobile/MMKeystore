@@ -10,6 +10,8 @@ android:
     - extra
     - addon
 #    - sys-img-armabi-v7a-android-26
+before_install:
+- yes | sdkmanager "platforms;android-28"
 script:
     - ./gradlew clean assemble test
 deploy:
