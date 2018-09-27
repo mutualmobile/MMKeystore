@@ -1,8 +1,6 @@
 # AndroidKeyStore
 
-[![Build Status](https://travis-ci.org/mutualmobile/androidkeystore.svg)](https://travis-ci.org/mutualmobile/androidkeystore)
 [![Version](https://api.bintray.com/packages/mutualmobile/Android/androidkeystore/images/download.svg)](https://bintray.com/mutualmobile/Android/androidkeystore)
-[![Javadoc](https://javadoc-emblem.rhcloud.com/doc/com.mutualmobile/androidkeystore/badge.svg)](http://www.javadoc.io/doc/com.mutualmobile/androidkeystore)
 
 AndroidKeyStore is a library for Android apps that allows you to encrypt sensitive information, The encryption uses the Android KeyStore available to generate and uses RSA and AES keys for encryption operations.
 

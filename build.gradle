@@ -32,7 +32,7 @@ allprojects {
   project.ext {
     buildToolsVersion = "27.0.3" // String
     minSdkVersion = 15 // Integer
-    targetSdkVersion = 27
+    targetSdkVersion = 28
     compileSdkVersion = 27
     SUPPORT_LIB_VERSION = '27.1.1'
   }
