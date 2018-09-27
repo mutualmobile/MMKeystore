@@ -1,23 +1,23 @@
-# MMKeyStore
+# AndroidKeyStore
 
-[![Build Status](https://travis-ci.org/mutualmobile/mmkeystore.svg)](https://travis-ci.org/mutualmobile/mmkeystore)
-[![Version](https://api.bintray.com/packages/mutualmobile/Android/mmkeystore/images/download.svg)](https://bintray.com/mutualmobile/Android/mmkeystore)
-[![Javadoc](https://javadoc-emblem.rhcloud.com/doc/com.mutualmobile/mmkeystore/badge.svg)](http://www.javadoc.io/doc/com.mutualmobile/mmkeystore)
+[![Build Status](https://travis-ci.org/mutualmobile/androidkeystore.svg)](https://travis-ci.org/mutualmobile/androidkeystore)
+[![Version](https://api.bintray.com/packages/mutualmobile/Android/androidkeystore/images/download.svg)](https://bintray.com/mutualmobile/Android/androidkeystore)
+[![Javadoc](https://javadoc-emblem.rhcloud.com/doc/com.mutualmobile/androidkeystore/badge.svg)](http://www.javadoc.io/doc/com.mutualmobile/androidkeystore)
 
-mmkeystore is a library for Android apps that allows you to encrypt sensitive information, The encryption uses the Android KeyStore available to generate and uses RSA and AES keys for encryption operations.
+AndroidKeyStore is a library for Android apps that allows you to encrypt sensitive information, The encryption uses the Android KeyStore available to generate and uses RSA and AES keys for encryption operations.
 
 ## Getting Started
 
 <p align="center"><img src="https://giphy.com/gifs/2WH71Azrx2ksWMGbsG/embed"></p>
 
 
-## Adding mmkeystore to your project
+## Adding androidkeystore to your project
 
 Include the following dependencies in your app's build.gradle :
 
 ```
 dependencies {
-    compile 'com.mutualmobile:mmkeystore:<version>'
+    compile 'com.mutualmobile:androidkeystore:<version>'
 }
 ```
 
@@ -27,10 +27,10 @@ In case you don't want to use the precompiled version, you can build the library
 
 ## How to use
 
-1. Get an instance of SyncCryptoFactory
+1. Get an instance of KeystoreCryptoFactory
 
 ```
-factory = SyncCryptoFactory.get(this)
+factory = KeystoreCryptoFactory.get(this)
 ```
 
 2. Generate key aliases
@@ -61,7 +61,7 @@ Realm - The popular mobile database that runs directly inside phones, tablets or
 
 ## License
 
-MMKeystore User Encryption is published under the Apache 2.0 license.
+AndroidKeyStore User Encryption is published under the Apache 2.0 license.
 
 License
 -------
