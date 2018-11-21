@@ -7,7 +7,7 @@ AndroidKeyStore is a library for Android apps that allows you to encrypt sensiti
 
 ## Getting Started
 
-<p align="center"><img src="https://giphy.com/gifs/2WH71Azrx2ksWMGbsG/embed"></p>
+<p align="center"><img src="https://media.giphy.com/media/2WH71Azrx2ksWMGbsG/giphy.gif"></p>
 
 
 ## Adding androidkeystore to your project
