@@ -40,9 +40,9 @@ import java.security.KeyStoreException
 import java.security.NoSuchAlgorithmException
 import java.security.NoSuchProviderException
 import java.security.SecureRandom
+import java.security.PrivateKey
 import java.security.UnrecoverableEntryException
 import java.security.cert.CertificateException
-import java.security.interfaces.RSAPublicKey
 import java.util.ArrayList
 import java.util.Calendar
 import java.util.Enumeration
@@ -256,9 +256,7 @@ constructor(protected var context: Context) :
   @Throws(KeyStoreException::class)
   private fun encryptAESKeyUsingRSA(alias: String, key: SecretKey): ByteArray {
     try {
-      val privateKeyEntry = keyStore.getEntry(alias, null) as KeyStore.PrivateKeyEntry
-      val publicKey = privateKeyEntry.certificate.publicKey as RSAPublicKey
-
+      val publicKey = keyStore.getCertificate(alias).publicKey
       val cipher = CipherFactory.get()
       cipher.init(Cipher.ENCRYPT_MODE, publicKey)
 
@@ -289,9 +287,9 @@ constructor(protected var context: Context) :
   @Throws(KeyStoreException::class)
   private fun decryptAESKeyUsingRSA(alias: String, aesEncKey: ByteArray): SecretKeySpec {
     try {
-      val privateKeyEntry = keyStore.getEntry(alias, null) as KeyStore.PrivateKeyEntry
       val cipher = CipherFactory.get()
-      cipher.init(Cipher.DECRYPT_MODE, privateKeyEntry.privateKey)
+      val privateKey = keyStore.getKey(alias, null) as PrivateKey
+      cipher.init(Cipher.DECRYPT_MODE, privateKey)
 
       val cipherInputStream = CipherInputStream(ByteArrayInputStream(aesEncKey), cipher)
       val values = ArrayList<Byte>()
