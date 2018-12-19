@@ -330,7 +330,7 @@ constructor(protected var context: Context) :
 
   companion object {
     private val DELIMITER = "]"
-    val X500_PRINCIPAL = "CN=AccuWeather, O=SkyGuard"
+    val X500_PRINCIPAL = "CN=MM, O=Keystore"
     val ANDROID_KEYSTORE = "AndroidKeyStore"
 
     val UNLOCK_ACTION = "com.android.credentials.UNLOCK"
