@@ -256,7 +256,14 @@ constructor(protected var context: Context) :
   @Throws(KeyStoreException::class)
   private fun encryptAESKeyUsingRSA(alias: String, key: SecretKey): ByteArray {
     try {
-      val publicKey = keyStore.getCertificate(alias).publicKey
+      val privateKey = keyStore.getKey(alias, null) as PrivateKey?
+
+      val publicKey = if (privateKey != null) {
+        keyStore.getCertificate(alias).publicKey
+      } else {
+        null
+      }
+
       val cipher = CipherFactory.get()
       cipher.init(Cipher.ENCRYPT_MODE, publicKey)
 

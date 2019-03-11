@@ -27,7 +27,7 @@ allprojects {
   }
 
   project.group = 'com.mutualmobile'
-  project.version = '0.0.2'
+  project.version = '0.0.3'
 
   project.ext {
     buildToolsVersion = "27.0.3" // String
