@@ -3,6 +3,8 @@ package com.mutualmobile.androidkeystore.android.crypto.api23
 import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
+import android.os.Build.VERSION
+import android.os.Build.VERSION_CODES
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import com.mutualmobile.androidkeystore.android.crypto.KeystoreCrypto
@@ -34,7 +36,7 @@ constructor(context: Context) : KeystoreCryptoApi18Impl(context) {
 
         val keyGenerator = KeyPairGenerator.getInstance(KeyProperties.KEY_ALGORITHM_RSA,
             KeystoreCryptoApi18Impl.ANDROID_KEYSTORE)
-        val spec = KeyGenParameterSpec.Builder(alias,
+        val specBuilder = KeyGenParameterSpec.Builder(alias,
             KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT)
             .setCertificateSubject(X500Principal(
                 KeystoreCryptoApi18Impl.X500_PRINCIPAL))
@@ -43,8 +45,10 @@ constructor(context: Context) : KeystoreCryptoApi18Impl(context) {
             .setCertificateNotAfter(end.time)
             .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
             .setRandomizedEncryptionRequired(false)
-            .build()
-        keyGenerator.initialize(spec)
+        if (VERSION.SDK_INT >= VERSION_CODES.P) {
+          specBuilder.setIsStrongBoxBacked(true)
+        }
+        keyGenerator.initialize(specBuilder.build())
         keyGenerator.generateKeyPair()
       } catch (e: NoSuchAlgorithmException) {
         e.printStackTrace()
