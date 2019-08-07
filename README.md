@@ -16,51 +16,39 @@ Include the following dependencies in your app's build.gradle :
 
 ```
 dependencies {
-    compile 'com.mutualmobile:androidkeystore:<version>'
+    implementation 'com.mutualmobile:androidkeystore:0.0.4'
 }
 ```
-
-See [version.txt](version.txt) for the latest version number.
-
-In case you don't want to use the precompiled version, you can build the library yourself from source.
 
 ## How to use
 
 1. Get an instance of KeystoreCryptoFactory
 
-```
-factory = KeystoreCryptoFactory.get(this)
-```
-
-2. Generate key aliases
-NOTE: This has to be a unique key identifier plus do this in a Background Thread as the process is ASYNC!
-
-```
- factory.create_key_if_not_available(EMAIL)
- factory.create_key_if_not_available(PASSWORD)
+``` java
+val factory = KeystoreCryptoFactory.get(context)
 ```
 
-3. Encrypt the string!
+2. Now carry out the encryption/decryption
 
-```
-val encryptedEmail = factory.encrypt(EMAIL, mEmail)
-val encryptedPassword = factory.encrypt(PASSWORD, mPassword)
-```
+**NOTE:** Since the Encryption/Decryption is Async, the following tasks needs to be done on a background thread
 
-4. Decrypt using the encrypted string!
+``` java
+  //Generate Key Aliases
+  factory.create_key_if_not_available(EMAIL)
+  factory.create_key_if_not_available(PASSWORD)
 
-```
-factory.decrypt(EMAIL, encryptedEmail)
-factory.decrypt(PASSWORD, encryptedPassword)
+  //Encrypt the string
+  val encryptedEmail = factory.encrypt(EMAIL, mEmail)
+  val encryptedPassword = factory.encrypt(PASSWORD, mPassword)
+
+  //Decrypt the string
+  factory.decrypt(EMAIL, encryptedEmail)
+  factory.decrypt(PASSWORD, encryptedPassword)
 ```
 
 ## Special Thanks
 
 Realm - The popular mobile database that runs directly inside phones, tablets or wearables. This library is cloned from (https://github.com/realm/realm-android-user-store)
-
-## License
-
-AndroidKeyStore User Encryption is published under the Apache 2.0 license.
 
 License
 -------
