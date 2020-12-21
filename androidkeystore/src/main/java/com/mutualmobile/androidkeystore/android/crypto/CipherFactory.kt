@@ -29,6 +29,7 @@ import javax.crypto.NoSuchPaddingException
  * Return an appropriate [Cipher] given the version of Android.
  * Ex: on API 23 OpenSSL is replaced by BoringSSL.
  */
+@Deprecated("Use Android Keystore instead")
 object CipherFactory {
 
   private val IS_JB43 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2

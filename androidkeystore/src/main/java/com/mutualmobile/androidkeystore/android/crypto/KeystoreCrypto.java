@@ -23,6 +23,7 @@ import java.util.Enumeration;
 /**
  * Define methods that Android API should expose regardless of the API version.
  */
+@Deprecated
 public interface KeystoreCrypto {
   /**
    * Encrypt the plain text using an {@code AES} key.

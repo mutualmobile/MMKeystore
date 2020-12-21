@@ -23,6 +23,7 @@ import com.mutualmobile.androidkeystore.android.crypto.api23.KeystoreCryptoApi23
 import com.mutualmobile.androidkeystore.android.crypto.apilegacy.KeystoreCryptoLegacy
 import java.security.KeyStoreException
 
+@Deprecated("Use Android Keystore instead")
 object KeystoreCryptoFactory {
 
   private val IS_API_23 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
